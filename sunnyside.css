@@ -1,0 +1,352 @@
+*,
+::before,
+::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.nav{
+    background-color: #3ebfff; 
+}
+
+.nav_toggle{
+    position: absolute;
+    cursor: pointer;
+    margin: 0rem 1rem;
+    right: 0;
+}
+.nav_toggle i{
+    width: 1.5rem;
+}
+
+#close{
+    display: none;
+    padding: 1rem;
+    color: white;
+    opacity: 70%;
+}
+#close:hover{
+    color: orange;
+    opacity: 100%;
+    transition: 0.3s;
+}
+
+#menu{
+    padding: 1rem;
+    color: white;
+    opacity: 70%;
+}
+#menu:hover{
+    color: orange;
+    opacity: 100%;
+    transition: 0.3s;
+}
+
+.nav_checkbox{
+    display: none;
+}
+
+.nav_menu{
+    display: flex;
+    flex-direction: column;
+    gap:3rem;
+    align-items: center;
+    margin: 0 1rem 0 1rem;
+    padding-top: 1rem;
+}
+
+.nav_menu li{
+    list-style: none;
+    display: none;
+
+}
+
+.nav_menu li:first-child{
+    margin-right: auto;
+    display: block;
+    text-transform: uppercase;
+}
+
+.nav_menu a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+    font-family: Fraunces;
+}
+
+.nav_menu li:hover{
+    
+    border-radius: 1rem;
+    color: black;
+    background-color: orange;
+    transition: 0.3s;
+}
+
+
+#nav_checkbox:checked ~ ul.nav_menu li{
+    display: block;
+    
+}
+
+#nav_checkbox:checked ~ body{
+    overflow: hidden;
+}
+
+
+#nav_checkbox:checked ~ label.nav_toggle #close{
+    display: block;
+    
+}
+
+#nav_checkbox:checked ~ label.nav_toggle #menu{
+    display: none;
+}
+
+.header_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo_container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1.5fr 1.5fr; 
+}
+.photo_container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+.photo_container h3{
+    text-align: center;
+    font-family: Barlow;
+    font-size: 2rem;
+    padding-top: 2rem;
+}
+.photo_container p{
+    text-align:center;
+    padding:1rem 1rem 1rem 1rem;
+    font-size: 1.1rem;
+}
+.photo_container a{
+    text-decoration: none;
+    color: black;
+    font-family: Barlow;
+    font-size: 1rem;
+}
+.photo_container a:hover{
+    border-bottom: 0.3rem solid #fae684;
+}
+.image3{
+    position: relative;
+}
+.image4{
+    position: relative;
+}
+.up{
+    position: absolute;
+    top:15rem;
+}
+
+.persons{
+    display: grid;
+    grid-template-rows: 0.4fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        'persons_header'
+        'person1'
+        'person2'
+        'person3';
+    text-align: center;
+    font-family: Barlow;
+}
+.persons_header{
+    grid-area: persons_header;
+}
+.person1{
+    grid-area: person1;
+}
+.person2{
+    grid-area: person2;
+}
+.person3{
+    grid-area: person3;
+}
+.persons .persons_header {
+    color:#a4a4a4;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding-top: 2rem;
+    letter-spacing: 0.2rem;
+}
+
+.persons img{
+    border-radius: 50%;
+    
+}
+
+.persons div{
+    padding-top: 1.5rem;
+}
+
+.persons .quote{
+    padding: 1.1rem 1.5rem 1.1rem 1.5rem;
+    color: #656469;
+    font-size: 1.1rem;
+}
+
+.persons .name{
+    font-size: 1.2rem;
+    color: black;
+}
+
+.persons .specialization{
+    font-size: 0.9rem;
+    color:#656469;
+    padding-top:0.9rem;
+}
+.persons .person3{
+    padding-bottom: 2.5rem;
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+.gallery img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer{
+    background-color: #90d4c5;
+
+}
+
+footer p{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1.5rem;
+    font-size: 1.3rem;
+    font-family: Fraunces;
+    color:#276e5e;
+}
+
+footer .footer_services{
+    display: flex;
+    justify-content: space-around;
+    padding:0 2rem 3rem 2rem;
+}
+
+footer li{
+    list-style: none;
+}
+
+footer a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-family:Fraunces;
+    color:#3f8676;
+}
+
+footer a:hover{
+    color:white;
+    transition: 0.3s;
+}
+
+.logo{
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+}
+
+
+
+@media only screen and (min-width : 560px){
+    .nav_toggle{
+        display: none;
+    }
+
+    .nav_menu{
+        flex-direction: row;
+    }
+    .nav_menu li{
+        display: block;
+        padding: 0.5rem;
+        border-radius: 1rem;
+    }
+    
+    .nav_menu li:hover{
+        color: white;
+        background-color:#6fcfff;
+        transition: 0.3s;
+    } 
+    body{
+        margin:0 2rem 0 2rem;  
+    }
+    .photo_container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;  
+    }
+    .persons{
+        padding: 2rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.4fr 1fr;
+        grid-template-areas: 
+            'persons_header persons_header persons_header'
+            'person1 person2 person3';
+        grid-gap:0.2rem;
+        text-align: center;
+        font-family: Barlow;
+    }
+    .gallery{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    footer .footer_services{
+        padding:0 30vw 3vh 30vw;
+    }
+   
+    .photo_container h3{
+        text-align: left;
+        font-family: Barlow;
+        font-size: 3.5rem;
+        padding:10rem 1rem 1rem 1rem;
+    }
+    .photo_container p{
+        text-align:left;
+        padding:1rem 1rem 1rem 1rem;
+        font-size: 2rem;
+    }
+    .photo_container a{
+        text-align: left;
+        text-decoration: none;
+        color: black;
+        font-family: Barlow;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    .photo_container a:hover{
+        border-bottom: 0.3rem solid #fae684;
+    }
+    .up{
+        position: absolute;
+        top:14rem;
+    }
+    .up h3{
+        text-align: center;
+    }
+    .up p{
+        text-align: center;
+        padding: 0 2rem 0 2rem;
+    }
+    
+} 
+
+
