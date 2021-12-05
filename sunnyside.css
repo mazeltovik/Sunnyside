@@ -9,6 +9,7 @@
 
 .nav{
     background-color: #3ebfff; 
+    
 }
 
 .nav_toggle{
@@ -103,6 +104,19 @@
 #nav_checkbox:checked ~ label.nav_toggle #menu{
     display: none;
 }
+
+.image_text{
+    background-color: #3ebfff;
+    text-align: center;
+    padding-top: 2rem;
+    font-size:  4rem;
+    color:white;
+    font-family: Fraunces;
+}
+
+
+
+
 
 .header_image img{
     width: 100%;
